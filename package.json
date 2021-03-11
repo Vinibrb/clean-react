@@ -4,7 +4,7 @@
   "description": "A Repo from the ReactJS, Hooks, Recoil, TDD, Clean Architecture, SOLID course im taking from Udemy",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
     "@types/node": "^14.14.33",
     "@typescript-eslint/eslint-plugin": "^4.17.0",
     "eslint": "^7.21.0",
-    "eslint-config-standard-with-typescript": "^11.0.1",
+    "eslint-config-standard-with-typescript": "^20.0.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.3.1",
