@@ -1,0 +1,20 @@
+{
+  "name": "clean-react",
+  "version": "1.0.0",
+  "description": "A Repo from the ReactJS, Hooks, Recoil, TDD, Clean Architecture, SOLID course im taking from Udemy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vinibrb/clean-react.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vinibrb/clean-react/issues"
+  },
+  "homepage": "https://github.com/Vinibrb/clean-react#readme"
+}
