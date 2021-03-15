@@ -4,7 +4,10 @@
   "description": "A Repo from the ReactJS, Hooks, Recoil, TDD, Clean Architecture, SOLID course im taking from Udemy",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --passWithNoTests",
+    "test:watch": "npm test -- --watch",
+    "test:ci": "npm test -- --coverage",
+    "test:staged": "npm test -- --findRelatedTests"
   },
   "repository": {
     "type": "git",
