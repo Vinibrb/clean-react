@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/Vinibrb/clean-react#readme",
   "devDependencies": {
+    "@testing-library/react": "^11.2.5",
     "@types/axios": "^0.14.0",
     "@types/faker": "^5.1.7",
     "@types/jest": "^26.0.20",
