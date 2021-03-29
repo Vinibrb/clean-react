@@ -30,15 +30,23 @@ const Login: React.FC<Props> = ({ validation, authentication }: Props) => {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
     event.preventDefault()
-    const { isLoading, emailError, passwordError, email, password } = state
-    if (isLoading || emailError || passwordError) {
-      return
+    try {
+      const { isLoading, emailError, passwordError, email, password } = state
+      if (isLoading || emailError || passwordError) {
+        return
+      }
+      setState({ ...state, isLoading: true })
+      await authentication.auth({
+        email,
+        password
+      })
+    } catch (error) {
+      setState({
+        ...state,
+        isLoading: false,
+        mainError: error.message
+      })
     }
-    setState({ ...state, isLoading: true })
-    await authentication.auth({
-      email,
-      password
-    })
   }
 
   return (
@@ -47,7 +55,7 @@ const Login: React.FC<Props> = ({ validation, authentication }: Props) => {
       <FormContext.Provider value={{ state, setState }}>
         <form data-testid="form" className={Styles.form} onSubmit={handleSubmit}>
           <h2>Login</h2>
-          <Input data-test-id="email" type="email" name="email" placeholder="Digite seu e-mail" />
+          <Input data-testid="email" type="email" name="email" placeholder="Digite seu e-mail" />
           <Input type="password" name="password" placeholder="Digite sua senha" />
           <button data-testid="submit" disabled={!!state.emailError || !!state.passwordError} className={Styles.submit} type="submit">Entrar</button>
           <span className={Styles.link}>Criar conta</span>
